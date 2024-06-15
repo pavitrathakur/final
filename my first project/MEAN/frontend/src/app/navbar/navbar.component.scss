@@ -1,0 +1,70 @@
+header{
+  position: relative;
+  background-color: #333;
+  padding: 0;
+  margin :0;
+
+}
+.logo{
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1rem;
+}
+.logo:hover{
+  color: green;
+}
+nav a:hover{
+  color: rgb(174, 231, 59);
+}
+nav a{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+.container{
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+ul{
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+}
+
+ul a{
+  padding: 1rem;
+  display: inline-block;
+}
+
+a span{
+  background: black;
+  color: white;
+  padding: 0.1rem 0.45rem;
+  border-radius: 100rem;
+  font-size:0.9rem;
+  text-decoration: none;
+}
+
+.menu-container{
+  position: relative;
+}
+
+.menu{
+  position:absolute;
+  z-index:1;
+  background:#333;
+  display: none;
+}
+.menu a{
+  cursor: pointer;
+}
+.menu-container:hover .menu{
+  display: block;
+}
+

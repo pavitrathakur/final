@@ -1,0 +1,26 @@
+<div class="back">
+  <app-notfound [visible]="!coffe.id" notFoundMessage="Food Not Found" resetLinkText="Back To Homepage">
+  </app-notfound>
+  <div *ngIf="coffe" class="container">
+    <img [src]="coffe.imageUrl" [alt]="coffe.name" />
+
+    <div class="details">
+      <div class="header">
+        <span class="name">
+          {{coffe.name}}
+        </span>
+
+      </div>
+      <div class="rating">
+        <star-rating [value]="coffe.stars" [totalstars]="5" checkedcolor="red" uncheckedcolor="white" size="25px"
+          [readonly]="true" />
+      </div>
+      <div class="price">
+        <span>
+          {{coffe.price | currency}}
+        </span>
+      </div>
+      <button (click)="addToCart()">Add To Cart</button>
+    </div>
+  </div>
+</div>

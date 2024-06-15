@@ -1,0 +1,117 @@
+.back{
+  margin:0; //removes default margin
+  background-size:cover;
+  background-repeat: no-repeat;
+  transition: 3s;
+  animation-name: animate ;
+  animation-direction: alternate-reverse;
+  animation-duration: 30s ;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite ;
+  animation-play-state: running;
+  animation-timing-function: ease-in-out;
+  width: auto;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  }
+  //This allows the element to move gradually.
+@keyframes  animate{
+    0%{
+      background-image: url(https://media.gettyimages.com/id/638172554/photo/woman-drinking-coffee-in-urban-cafe-while-looking-outside-sunny-reflections-in-window.jpg?s=2048x2048&w=gi&k=20&c=-T3f8Hqo_2FcSD3Tsyedw2tfl186NZvIhg7Iv8UOof4=);
+
+    }
+    20%{
+      background-image: url(https://media.gettyimages.com/id/859613042/photo/coffee-break.jpg?s=2048x2048&w=gi&k=20&c=5wIv8WIjSxRszkN_YLYm83rYW6lP5JYlidVP-drFz_k=);
+    }
+    40%{
+      background-image: url(https://media.gettyimages.com/id/1351374287/photo/woman-enjoying-cappuccino-in-a-cafe.jpg?s=2048x2048&w=gi&k=20&c=A2PHiZkBtLn5ToEFiwxUgpgTWN_n60VF0tQ0CYieNwc=);
+    }
+    60%{
+      background-image: url(https://media.gettyimages.com/id/919384646/photo/man-taking-his-order-at-a-coffee-shop.jpg?s=2048x2048&w=gi&k=20&c=BtUN8sO8W_vzTRmLC0cJ1RUUcYtXH5bj8SkUfUYmQTo=);
+    }
+    80%{
+      background-image: url(https://media.gettyimages.com/id/1337396459/photo/two-young-women-sit-in-a-cafe-eating-and-chatting-while-having-fun-together.jpg?s=2048x2048&w=gi&k=20&c=Mj2Vl8mU1pkUvdlTTQMLsqgERCkz7G-9mQ2F0in-qD4=);
+    }
+    100%{
+      background-image: url(https://media.gettyimages.com/id/1091916996/photo/portrait-of-confident-female-owner-standing-at-entrance-of-deli.jpg?s=2048x2048&w=gi&k=20&c=x6pkwZw-jTH5hECSRMOpH-TPr9xou71qAK8qoLIFS30=);
+    }
+}
+ /* hides scroll bar */
+ .back::-webkit-scrollbar {
+  display: none;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 2rem;
+
+}
+
+.container > *{
+  min-width: 15rem;
+  max-width: 40rem;
+  height: 32rem;
+}
+
+img{
+  border-radius: 3rem;
+  flex: 1 0;
+  object-fit: cover;
+  height: 35rem;
+  margin: 1rem;
+}
+
+.details{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex:1 0;
+  padding: 2rem;
+  color: black;
+  margin-left: 1rem;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.name{
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  background-image:conic-gradient(
+    #3c9a62 0%, #1c8607 33%, #ee4b2b 33%, #ee4b2b 66%, #00c2cb 66%, #00c2cb 99%
+  );
+  color: transparent;
+  background-clip: text;
+
+}
+
+.price{
+  font-size: 1.8rem;
+  margin: 2rem 2rem 2rem 0;
+  color: green;
+}
+
+.price::before{
+  content: "Price: ";
+  color: darkgrey;
+}
+
+button{
+  color: white;
+  background: green;
+  border: none;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 10rem;
+  outline: none;
+}
+button:hover{
+  opacity: 0.9;
+  cursor: pointer;
+}

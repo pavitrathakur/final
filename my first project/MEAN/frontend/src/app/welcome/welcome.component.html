@@ -1,0 +1,26 @@
+<div class="back">
+  <app-search></app-search>
+  <app-notfound [visible]="!drink || !drink.length" resetLinkText="Go Back!"></app-notfound>
+  <ul>
+    <li *ngFor="let coffe of drink">
+      <a routerLink="/coffe/{{coffe.id}}">
+        <img [src]="coffe.imageUrl" [alt]="coffe.name" />
+        <div class="content">
+          <div class="name">
+            <b>{{coffe.name}}</b>
+          </div>
+          <div class="stars">
+            <star-rating [value]="coffe.stars" [totalstars]="5" checkedcolor="red" uncheckedcolor="white" size="25px"
+              [readonly]="true">
+            </star-rating>
+          </div>
+          <div class="price">
+            <span>
+              <b>{{coffe.price | currency}}</b>
+            </span>
+          </div>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
